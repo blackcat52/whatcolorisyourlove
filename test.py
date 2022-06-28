@@ -27,7 +27,7 @@ with col2:
         heart2,
         speed=1,
         reverse=False,
-        quality="low", # medium , high
+        quality="high", # medium , low
         height=260,
         width=None,
         key=None,
@@ -96,7 +96,7 @@ st_lottie(
         heart,
         speed=3,
         reverse=False,
-        quality="low", # medium , high
+        quality="high", # medium , low
         height=300,
         width=None,
         key=None,
