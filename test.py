@@ -4,19 +4,19 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 import random
 
-# GitHub: https://github.com/andfanilo/streamlit-lottie
-### --- FUNCTIONS
+st.set_page_config('What Color Is Your Love?')
+
+### --- FUNCTIONS --- ###
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code !=200:
         return None
     return r.json()
+
 heart = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_izvn2khx.json")
 heart2 = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_goj7emul.json")
 
-st.set_page_config('What Color Is Your Love?')
-
-### --- TITLE AND ANIMATION
+### --- TITLE AND ANIMATION --- ###
 col1, col2 = st.columns(2)
 with col1:
     st.title('What Color Is Your Love?')
@@ -84,14 +84,16 @@ st.checkbox("Is something bothering them? I worry and feel down with them.")
 st.checkbox("Sugar and sweets cures all ills! I take them to a cafe with great food.")
 st.write('')
 
-### --- RANDOM COLOR
+### --- RANDOM COLOR --- ###
 colors = ["Blue", "Red", "Yellow", "Orange", "Purple", "Green"]
 color = random.choice(colors)
 
+### --- SUBMIT --- ###
 if st.button('Submit'):
     st.success(f'The color of your love is {color}. Click below for your full detailed report.')
     st.write('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">Click Here</a>', unsafe_allow_html=True)
 
+### --- ANIMATION --- ###    
 st_lottie(
         heart,
         speed=3,
