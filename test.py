@@ -1,14 +1,40 @@
+import json
+import requests
 import streamlit as st
-import webbrowser
+from streamlit_lottie import st_lottie
 import random
 
-st.set_page_config('What Color Is Your Love?')
-st.title('What Color Is Your Love?')
+# GitHub: https://github.com/andfanilo/streamlit-lottie
+### --- FUNCTIONS
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code !=200:
+        return None
+    return r.json()
+heart = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_izvn2khx.json")
+heart2 = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_goj7emul.json")
 
+st.set_page_config('What Color Is Your Love?')
+
+
+### --- TITLE AND ANIMATION
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.title('What Color Is Your Love?')
+    st.write('Take our "What Color Is Your Love?" Test and get a “freakishly accurate” description of who you are and why you do things the way you do.')
+
+with col2:
+    st_lottie(
+        heart2,
+        speed=1,
+        reverse=False,
+        quality="low", # medium , high
+        height=260,
+        width=None,
+        key=None,
+)
 
 ### --- QUESTIONS --- ###
-st.caption('Take our "What Color Is Your Love?" Test and get a “freakishly accurate” description of who you are and why you do things the way you do.')
-    
 st.write('1. How do you feel about loving someone your entire life.')
 st.checkbox('Feels like I could probably do it.')
 st.checkbox('Feels impossible, realistically speaking.')
@@ -66,3 +92,13 @@ color = random.choice(colors)
 if st.button('Submit'):
     st.success(f'Your color is {color}. Click below for your full report.')
     st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">Full Report</a>', unsafe_allow_html=True)
+
+st_lottie(
+        heart,
+        speed=3,
+        reverse=False,
+        quality="low", # medium , high
+        height=300,
+        width=None,
+        key=None,
+)
