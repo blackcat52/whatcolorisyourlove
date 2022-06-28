@@ -16,14 +16,13 @@ heart2 = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_goj7emul.
 
 st.set_page_config('What Color Is Your Love?')
 
-
 ### --- TITLE AND ANIMATION
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 with col1:
     st.title('What Color Is Your Love?')
     st.write('Take our "What Color Is Your Love?" Test and get a “freakishly accurate” description of who you are and why you do things the way you do.')
 
-with col3:
+with col2:
     st_lottie(
         heart2,
         speed=1,
