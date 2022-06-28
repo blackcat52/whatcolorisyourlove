@@ -66,12 +66,12 @@ color = random.choice(colors)
 ### --- URL
 url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 st.markdown(url)
+here = st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">here</a>', unsafe_allow_html=True)
 
 
 if st.button('Submit'):
-    st.success(f'Your color is {color}. You are being redirected to your full description.')
-
-st.markdown('<a target="_blank" href="https://www.globo.com/">Access globo.com</a>', unsafe_allow_html=True)
+    st.success(f'Your color is {color}. Click {here} to be redirected to your full description.')
+    st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">Access globo.com</a>', unsafe_allow_html=True)
     
     
     
