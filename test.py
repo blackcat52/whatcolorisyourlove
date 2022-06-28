@@ -65,7 +65,8 @@ color = random.choice(colors)
 
 if st.button('Submit'):
     st.success(f'Your color is {color}. You are being redirected to your full description.')
-    webbrowser.open_new_tab("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    webbrowser.open(url, new=0, autoraise=True)
     
     
     
