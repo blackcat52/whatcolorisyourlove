@@ -63,18 +63,6 @@ st.write('')
 colors = ["Blue", "Red", "Yellow", "Orange", "Purple", "Green"]
 color = random.choice(colors)
 
-### --- URL
-url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-st.markdown(url)
-st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">here</a>', unsafe_allow_html=True)
-
-
 if st.button('Submit'):
-    st.success(f'Your color is {color}. Click {st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">here</a>', unsafe_allow_html=True)} to be redirected to your full description.')
-    
-    
-    
-    
-    
-
-
+    st.success(f'Your color is {color}. Click below for your report.')
+    st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">Full Report</a>', unsafe_allow_html=True)
