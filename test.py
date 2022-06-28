@@ -66,9 +66,9 @@ color = random.choice(colors)
 
 if st.button('Submit'):
     st.success(f'Your color is {color}. You are being redirected to your full description.')
-        if platform.system() == 'Windows':
-            url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            webbrowser.open(url)
+    if platform.system() == 'Windows':
+        url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        webbrowser.open(url)
     
     
     
