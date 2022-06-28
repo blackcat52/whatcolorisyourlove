@@ -23,7 +23,7 @@ with col1:
     st.title('What Color Is Your Love?')
     st.write('Take our "What Color Is Your Love?" Test and get a “freakishly accurate” description of who you are and why you do things the way you do.')
 
-with col2:
+with col3:
     st_lottie(
         heart2,
         speed=1,
