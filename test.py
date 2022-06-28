@@ -1,6 +1,4 @@
 import streamlit as st
-from bokeh.models.widgets import Div
-import platform
 import webbrowser
 import random
 
@@ -72,11 +70,16 @@ st.markdown(url)
 
 if st.button('Submit'):
     st.success(f'Your color is {color}. You are being redirected to your full description.')
-    js = "window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')"  # New tab or window
-    js = "window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'"  # Current tab
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
+
+st.write(f'''
+    <a target="_self" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <button>
+            Please login via Google
+        </button>
+    </a>
+    ''',
+    unsafe_allow_html=True
+)
     
     
     
