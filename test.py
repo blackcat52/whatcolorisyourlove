@@ -90,7 +90,7 @@ color = random.choice(colors)
 
 if st.button('Submit'):
     st.success(f'Your color is {color}. Click below for your full report.')
-    st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">Full Report</a>', unsafe_allow_html=True)
+    st.markdown('<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">Click Here</a>', unsafe_allow_html=True)
 
 st_lottie(
         heart,
