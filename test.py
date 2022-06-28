@@ -71,15 +71,7 @@ st.markdown(url)
 if st.button('Submit'):
     st.success(f'Your color is {color}. You are being redirected to your full description.')
 
-st.write(f'''
-    <a target="_self" href="https://www.google.com">
-        <button>
-            Please login via Google
-        </button>
-    </a>
-    ''',
-    unsafe_allow_html=True
-)
+st.markdown('<a target="_blank" href="https://www.globo.com/">Access globo.com</a>', unsafe_allow_html=True)
     
     
     
