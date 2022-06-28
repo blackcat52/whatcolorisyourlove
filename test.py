@@ -94,7 +94,7 @@ if st.button('Submit'):
 
 st_lottie(
         heart,
-        speed=4,
+        speed=3,
         reverse=False,
         quality="low", # medium , high
         height=300,
